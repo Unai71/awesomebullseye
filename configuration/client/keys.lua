@@ -21,7 +21,26 @@ local clientKeys =
       c:kill()
     end,
     {description = 'close', group = 'client'}
-  )
+  ),
+  awful.key({ modkey,           }, "n",
+       function (c)
+           -- The client currently has the input focus, so it cannot be
+           -- minimized, since minimized clients can't have the focus.
+           c.minimized = true
+       end ,
+       {description = "minimize", group = "client"}),
+   awful.key({ modkey,           }, "m",
+       function (c)
+           c.maximized = true
+           c:raise()
+       end ,
+       {description = "(un)maximize", group = "client"}),
+   awful.key({ modkey, "Control" }, "m",
+       function (c)
+           c.maximized_vertical = not c.maximized_vertical
+           c:raise()
+       end ,
+       {description = "(un)maximize vertically", group = "client"})
 )
 
 return clientKeys
