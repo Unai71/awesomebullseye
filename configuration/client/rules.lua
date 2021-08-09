@@ -25,6 +25,9 @@ awful.rules.rules = {
       maximized_vertical = false
     }
   },
+  { rule = { instance = "spotify"},
+    properties = { floating = true }
+  },
   {
     rule_any = {name = {'QuakeTerminal'}},
     properties = {skip_decoration = true}
