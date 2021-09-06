@@ -40,7 +40,7 @@ wget -qO- https://git.io/papirus-icon-theme-install | sh
 ### Debian-Based Installs
 
 ```
-git clone --branch awesome [url] ~/.config/
+git clone [url] ~/.config/awesome/
 ```
 
 ### 3) Install picom
