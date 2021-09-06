@@ -1,7 +1,7 @@
 ## Material and Mouse driven theme for [AwesomeWM 4.3](https://awesomewm.org/)
-### Original design by PapyElGringo, This is a fork for my personal use
+### Original design by ChrisTitus, This is a fork for my personal use
 
-*Only tested on lenovo ideapad 510-15ISK and Thinkpad L15 g2, your mileage may differ*
+*Only tested on lenovo ideapad 510-15ISK and Thinkpad L15 g2, your mileage may vary*
 
 *This is a fork of chris titus personal [awesome-setup](https://github.com/ChrisTitusTech/titus-awesome/tree/debian/widget)*
 
