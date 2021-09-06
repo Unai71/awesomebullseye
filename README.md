@@ -21,7 +21,8 @@ wget -qO- https://git.io/papirus-icon-theme-install | sh
 - [AwesomeWM](https://awesomewm.org/) as the window manager - universal package install: awesome
 - [Roboto](https://fonts.google.com/specimen/Roboto) as the **font** - Debian: fonts-roboto Arch: ttf-roboto
 - [Rofi](https://github.com/DaveDavenport/rofi) for the app launcher - universal install: rofi
-- [picom](https://github.com/yshui/picom) for the compositor (blur and animations) universal install: picom - Debian users need PPA (`sudo add-apt-repository ppa:regolith-linux/unstable`) __
+- [picom](https://github.com/jonaburg/picom) for the compositor (blur and animations) universal install: picom
+  - *Note: I highly recommend using jonaburg's picom fork for debian users* 
 - [slock](https://github.com/aario/slock-blur) the lockscreen application
 - [xclip](https://github.com/astrand/xclip) for copying screenshots to clipboard package: xclip
 - [gnome-polkit] recommend using the gnome-polkit as it integrates nicely for elevating programs that need root access
