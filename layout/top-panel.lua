@@ -1,15 +1,18 @@
-local awful = require('awful')
+local awful     = require('awful')
 local beautiful = require('beautiful')
-local wibox = require('wibox')
-local TaskList = require('widget.task-list')
-local TagList = require('widget.tag-list')
-local gears = require('gears')
+local wibox     = require('wibox')
+local TaskList  = require('widget.task-list')
+local TagList   = require('widget.tag-list')
+local gears     = require('gears')
 local clickable_container = require('widget.material.clickable-container')
 local mat_icon_button = require('widget.material.icon-button')
 local mat_icon = require('widget.material.icon')
-local dpi = require('beautiful').xresources.apply_dpi
-local icons = require('theme.icons')
-local battery = require('widget.battery')
+local dpi      = require('beautiful').xresources.apply_dpi
+local icons    = require('theme.icons')
+--Widgets!
+local battery    = require('widget.battery')
+local ram        = require('widget.ram')
+local brightness = require('widget.brightness')
 -- Titus - Horizontal Tray
 local systray = wibox.widget.systray()
   systray:set_horizontal(true)
@@ -124,16 +127,16 @@ local TopPanel = function(s)
         -- Create a taglist widget
         TagList(s),
         TaskList(s),
-        add_button
-      },
+        },
       nil,
       {
+	
         layout = wibox.layout.fixed.horizontal,
         wibox.container.margin(systray, dpi(3), dpi(3), dpi(6), dpi(3)),
         -- Layout box
-        --LayoutBox(s),
-	--battery
+        --ram(),
 	battery,
+--	brightness{ type = 'icon_and_text', program = 'light', step = 2},
         -- Clock
         clock_widget,
 	--Layout box
