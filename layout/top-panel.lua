@@ -10,9 +10,10 @@ local mat_icon = require('widget.material.icon')
 local dpi      = require('beautiful').xresources.apply_dpi
 local icons    = require('theme.icons')
 --Widgets!
-local battery    = require('widget.battery')
-local ram        = require('widget.ram')
-local brightness = require('widget.brightness')
+local battery    	= require('widget.battery')
+local ram        	= require('widget.ram')
+local brightness 	= require('widget.brightness')
+local volume_widget	= require('widget.volume-widget.volume')
 -- Titus - Horizontal Tray
 local systray = wibox.widget.systray()
   systray:set_horizontal(true)
@@ -94,6 +95,14 @@ local LayoutBox = function(s)
   return layoutBox
 end
 
+function spacer(width)
+	return wibox.widget {
+		forced_width = width,
+		layout = wibox.layout.fixed.horizontal
+	}
+end
+
+
 local TopPanel = function(s)
   
     local panel =
@@ -134,12 +143,10 @@ local TopPanel = function(s)
         layout = wibox.layout.fixed.horizontal,
         wibox.container.margin(systray, dpi(3), dpi(3), dpi(6), dpi(3)),
         -- Layout box
-        --ram(),
+	volume_widget{widget_type = 'icon_and_text' , icon_dir = '~/.icons/'},
+     	spacer(10),
 	battery,
---	brightness{ type = 'icon_and_text', program = 'light', step = 2},
-        -- Clock
         clock_widget,
-	--Layout box
 	LayoutBox(s),
       }
     }
