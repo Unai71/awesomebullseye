@@ -35,6 +35,7 @@ wget -qO- https://git.io/papirus-icon-theme-install | sh
 - [network-manager-applet](https://gitlab.gnome.org/GNOME/network-manager-applet) nm-applet is a Network Manager Tray display from GNOME.
 - [xfce4-power-manager](https://docs.xfce.org/xfce/xfce4-power-manager/start) XFCE4's power manager is excellent and a great way of dealing with sleep, monitor timeout, and other power management features.
 - firefox or brave as a browser (Para usar la ultima version de firefox usar esta [guía](./Como instalar firefox como aplicación.md)
+- [nvim](https://github.com/neovim/neovim/wiki/Building-Neovim)
 
 ### 2) Clone the configuration
 
