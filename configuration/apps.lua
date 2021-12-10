@@ -16,10 +16,10 @@ return {
     region_screenshot = 'flameshot gui -p ~/Imágenes/screenshots',
     delayed_screenshot = 'flameshot full -p ~/Imágenes/screenshots -d 5000',
     browser = 'firefox',
-    editor = 'atom', -- gui text editor
+    editor = 'codium', -- gui text editor
     social = 'telegram-desktop',
     game = rofi_command,
-    files = 'thunar',
+    files = 'nautilus',
     music = 'spotify'
   },
 
