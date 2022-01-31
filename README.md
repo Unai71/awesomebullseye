@@ -12,7 +12,7 @@
 ### 1) Get all the dependencies
 
 ```
-sudo apt install awesome fonts-roboto rofi xclip qt5-style-plugins materia-gtk-theme lxappearance brightnessctl flameshot thunar xfce4-power-manager pnmixer network-manager-gnome policykit-1-gnome nitrogen -y
+sudo apt install awesome fonts-roboto rofi xclip qt5-style-plugins materia-gtk-theme lxappearance brightnessctl flameshot thunar xfce4-power-manager pnmixer network-manager-gnome policykit-1-gnome nitrogen libxrandr-dev libpam0g-dev -y
 wget -qO- https://git.io/papirus-icon-theme-install | sh
 ```
 
@@ -37,6 +37,10 @@ wget -qO- https://git.io/papirus-icon-theme-install | sh
 - firefox or brave as a browser (Para usar la ultima version de firefox usar esta [guía](./Como instalar firefox como aplicación.md)
 - [nvim](https://github.com/neovim/neovim/wiki/Building-Neovim)
 - [vscodium](https://github.com/VSCodium/vscodium/releases)
+
+*nota:* para tener freakin sonido:
+
+``sudo nvim /etc/modprobe.d/alsa-base`` y borrar todo
 
 ### 2) Clone the configuration
 
