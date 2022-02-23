@@ -1,7 +1,7 @@
-#!bin/sh
+#!/bin/sh
 
 #Actualización y dependencias 
-apt install awesome fonts-roboto rofi xclip qt5-style-plugins materia-gtk-theme lxappearance brightnessctl flameshot thunar xfce4-power-manager pnmixer network-manager-gnome policykit-1-gnome nitrogen libxrandr-dev libpam0g-dev -y
+apt install awesome fonts-roboto rofi xclip qt5-style-plugins materia-gtk-theme lxappearance brightnessctl flameshot thunar xfce4-power-manager pnmixer network-manager-gnome policykit-1-gnome nitrogen libxrandr-dev libpam0g-dev chromium  meson ninja-build -y
 wget -qO- https://git.io/papirus-icon-theme-install | sh
 
 #alsa sound rehab
@@ -20,4 +20,19 @@ wget https://telegram.org/dl/desktop/linux -O tsetup.tar.xz
 tar xvf tsetup.tar.xz 
 mv Telegram ~/.local/lib/
 rm tsetup.tar.xz
+ #Ahora vamos a instalar picom
+
+ git clone https://github.com/jonaburg/picom.git
+ cd picom || return
+ meson --buildtype=release . build
+ ninja -C build install
+
+
+ mkdir -p ~/.config/rofi
+ cp "$HOME"/.config/awesome/theme/config.rasi ~/.config/rofi/config.rasi
+ sed -i '/@import/c\@import "'"$HOME"'/.config/awesome/theme/spotlight.rasi"' ~/.config/rofi/config.rasi
+ 
+
+
+
 
