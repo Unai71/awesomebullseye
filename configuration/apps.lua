@@ -8,7 +8,7 @@ local rofi_command = 'rofi -show drun'
 return {
   -- List of apps to start by default on some actions
   default = {
-    terminal = 'kitty',
+    terminal = 'konsole',
     rofi = rofi_command,
     lock = 'slock',
     quake = 'kitty',
