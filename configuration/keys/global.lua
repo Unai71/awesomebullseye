@@ -38,7 +38,7 @@ local globalKeys =
     {modkey},
     'r',
     function()
-      awful.spawn('rofi -combi-modi window,drun -show combi -modi combi')
+      awful.spawn('rofi -show run')
     end,
     {description = 'Main menu', group = 'awesome'}
   ),
@@ -46,7 +46,7 @@ local globalKeys =
     {altkey},
     'space',
     function()
-      awful.spawn('rofi -combi-modi window,drun -show combi -modi combi')
+      awful.spawn('rofi -show drun')
     end,
     {description = 'Show main menu', group = 'awesome'}
   ),
