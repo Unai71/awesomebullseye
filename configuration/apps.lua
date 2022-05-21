@@ -8,10 +8,10 @@ local rofi_command = 'rofi -show drun'
 return {
   -- List of apps to start by default on some actions
   default = {
-    terminal = 'konsole',
+    terminal = 'alacritty',
     rofi = rofi_command,
     lock = 'slock',
-    quake = 'kitty',
+    quake = 'alacritty',
     screenshot = 'flameshot full -p ~/Imágenes/screenshots',
     region_screenshot = 'flameshot gui -p ~/Imágenes/screenshots',
     delayed_screenshot = 'flameshot full -p ~/Imágenes/screenshots -d 5000',
