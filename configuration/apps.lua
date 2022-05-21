@@ -47,6 +47,7 @@ return {
     -- Add applications that need to be killed between reloads
     -- to avoid multipled instances, inside the awspawn script
     '~/.config/awesome/configuration/awspawn', -- Spawn "dirty" apps that can linger between sessions
+    'fusuma -d',
     'bluetooth off' --power off bluetooth at startup
   }
 }
