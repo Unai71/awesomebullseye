@@ -60,7 +60,7 @@ local function factory(args)
 
     bat_notification_low_preset = {
         title   = "Battery low",
-        text    = "Plug the cable!",
+        text    = "Conecta el cable, ababol!",
         timeout = 15,
         fg      = "#202020",
         bg      = "#CDCDCD"
@@ -68,7 +68,7 @@ local function factory(args)
 
     bat_notification_charged_preset = {
         title   = "Battery full",
-        text    = "You can unplug the cable",
+        text    = "Lo puedes desconectar, sin prisa eh",
         timeout = 15,
         fg      = "#202020",
         bg      = "#CDCDCD"

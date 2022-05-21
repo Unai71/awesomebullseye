@@ -94,9 +94,8 @@ local gray       = "#858585"
 -- textclock.forced_height = 36
 
 --Nuevo textclock, basado en awesome-copycats
---local mytextclock = wibox.widget.textclock(markup(gray, "%a")
---.. markup(white, "%d") .. markup(gray, "%b") .. markup(white,"%H:%M "))
---mytextclock.font = "Roboto Mono"
+local mytextclock = wibox.widget.textclock(markup(white, "%d") .. markup(gray, "%b ") .. markup(white,"%H:%M "))
+mytextclock.font = "Terminus 11"
 
 
 --Nuevo calendario 
@@ -129,10 +128,13 @@ local bat = lain.widget.bat({
   end
 })
 
+--CPU
 local cpu = lain.widget.cpu({
   settings = function()
-    cpu_header = "Cpu "
-    c
+    cpu_header = "CPU "
+    cpu_usage =cpu_now.usage .. "% "
+    widget:set_markup(markup.font(theme.font, markup(gray,cpu_header) .. markup(white, cpu_usage)))
+  end
 })
 theme.volume = lain.widget.alsa({
   --togglechannel = "IEC958.3",
@@ -241,8 +243,9 @@ local TopPanel = function(s)
         spacer(10),
         theme.volume,
      	-- spacer(10),
+       cpu,
       	bat,
-        textclock,
+        mytextclock,
 	LayoutBox(s),
       }
     }

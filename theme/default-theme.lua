@@ -16,7 +16,7 @@ theme.primary = mat_colors.deep_orange
 theme.accent = mat_colors.pink
 
 -- Background
-theme.background = mat_colors.grey
+theme.background = '#121212'
 
 local awesome_overrides =
   function(theme)
@@ -38,7 +38,7 @@ local awesome_overrides =
   theme.bg_urgent = '#3F3F3F'
   theme.bg_systray = theme.background.hue_800
 
-  -- Borders
+  -- Bordersgrey
 
   theme.border_width = dpi(2)
   theme.border_normal = theme.background.hue_800
