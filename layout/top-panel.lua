@@ -122,20 +122,26 @@ theme.cal = lain.widget.cal({
 --Bateria 
 local bat = lain.widget.bat({
   settings = function()
-    bat_header = "Bat "
+    bat_header = "BAT "
     bat_p      = bat_now.perc .. " "
     widget:set_markup(markup.font(theme.font, markup(gray,bat_header) .. markup(white, bat_p)))
   end
 })
 
 --CPU
+local cpu_temp = lain.widget.temp({
+  settings = function()
+    cpu_temp_now = coretemp_now .. "ºC "
+  end
+})
 local cpu = lain.widget.cpu({
   settings = function()
     cpu_header = "CPU "
     cpu_usage =cpu_now.usage .. "% "
-    widget:set_markup(markup.font(theme.font, markup(gray,cpu_header) .. markup(white, cpu_usage)))
+    widget:set_markup(markup.font(theme.font, markup(gray,cpu_header) .. markup(white, cpu_usage) .. markup(white,cpu_temp_now)))
   end
 })
+
 theme.volume = lain.widget.alsa({
   --togglechannel = "IEC958.3",
   settings = function()
