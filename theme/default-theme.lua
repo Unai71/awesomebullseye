@@ -31,7 +31,7 @@ local awesome_overrides =
 
   theme.fg_focus = '#e4e4e4'
   theme.fg_urgent = '#CC9393'
-  theme.bat_fg_critical = '#232323'
+  theme.bat_fg_critical = '#ff0000'
 
   theme.bg_normal = theme.background.hue_800
   theme.bg_focus = '#5a5a5a'
@@ -42,7 +42,7 @@ local awesome_overrides =
 
   theme.border_width = dpi(2)
   theme.border_normal = theme.background.hue_800
-  theme.border_focus = theme.primary.hue_300
+  theme.border_focus = '#ff0000'
   theme.border_marked = '#CC9393'
 
   -- Menu

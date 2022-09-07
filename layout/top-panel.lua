@@ -32,8 +32,8 @@ theme.font                                      = "Terminus 10.5"
 theme.taglist_font                              = "Icons 10"
 theme.fg_normal                                 = "#747474"
 theme.fg_focus                                  = "#DDDCFF"
-theme.bg_normal                                 = "#121212"
-theme.bg_focus                                  = "#121212"
+theme.bg_normal                                 = "#241d1d"
+theme.bg_focus                                  = "#241d1d"
 theme.fg_urgent                                 = "#CC9393"
 theme.bg_urgent                                 = "#2A1F1E"
 theme.border_width                              = dpi(0)
@@ -87,14 +87,15 @@ awful.util.tagnames   = { "ƀ", "Ƅ", "Ɗ", "ƈ", "ƙ" }
 local markup     = lain.util.markup
 local separators = lain.util.separators
 local white      = theme.fg_focus
-local gray       = "#858585"
+local gray       = "#565454"
+local red        = "#9b0b0b"
 
 -- Clock / Calendar 12AM/PM fornat
 --local textclock = wibox.widget.textclock('<span font="Roboto Mono 12">%I:%M %p</span>')
 -- textclock.forced_height = 36
 
 --Nuevo textclock, basado en awesome-copycats
-local mytextclock = wibox.widget.textclock(markup(white, "%d") .. markup(gray, "%b ") .. markup(white,"%H:%M "))
+local mytextclock = wibox.widget.textclock(markup(white, "| %d ") .. markup(white, "%b ") .. markup(white,"%H:%M |"))
 mytextclock.font = "Terminus 11"
 
 
@@ -123,7 +124,7 @@ theme.cal = lain.widget.cal({
 local bat = lain.widget.bat({
   settings = function()
     bat_header = "BAT "
-    bat_p      = bat_now.perc .. " "
+    bat_p      = bat_now.perc .. "  "
     widget:set_markup(markup.font(theme.font, markup(gray,bat_header) .. markup(white, bat_p)))
   end
 })
@@ -217,7 +218,7 @@ local TopPanel = function(s)
       x = s.geometry.x,
       y = s.geometry.y,
       stretch = false,
-      bg = theme.background_normal,
+      bg = '#241d1d',
       fg = white,
       struts = {
         top = dpi(32)
@@ -249,7 +250,7 @@ local TopPanel = function(s)
         spacer(10),
         theme.volume,
      	-- spacer(10),
-       cpu,
+        cpu,
       	bat,
         mytextclock,
 	LayoutBox(s),
