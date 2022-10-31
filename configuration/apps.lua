@@ -12,9 +12,8 @@ return {
     rofi = rofi_command,
     lock = 'betterlockscreen -l',
     quake = 'alacritty',
-    screenshot = 'flameshot full -p ~/Imágenes/screenshots',
-    region_screenshot = 'flameshot gui -p ~/Imágenes/screenshots',
-    delayed_screenshot = 'flameshot full -p ~/Imágenes/screenshots -d 5000',
+    screenshot = 'scrot -b ~/Imágenes/Screenshots/%b-%d::%H:%M:%S.png',
+    region_screenshot = "scrot -s ~/Imágenes/Screenshots/%b-%d::%H:%M:%S.png -e 'xclip -selection clipboard -t image/png -i $f'";
     browser = 'firefox',
     editor = 'codium', -- gui text editor
     social = 'telegram-desktop',
@@ -47,7 +46,7 @@ return {
     -- Add applications that need to be killed between reloads
     -- to avoid multipled instances, inside the awspawn script
     '~/.config/awesome/configuration/awspawn', -- Spawn "dirty" apps that can linger between sessions
-    'fusuma -d',
+    'touchegg',
   }
 }
 
