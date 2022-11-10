@@ -18,7 +18,7 @@ return {
     editor = 'codium', -- gui text editor
     social = 'telegram-desktop',
     game = rofi_command,
-    files = 'nautilus',
+    files = 'thunar',
     music = 'spotify'
   },
 
