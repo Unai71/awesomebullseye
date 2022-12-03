@@ -12,8 +12,12 @@
 ### 1) Get all the dependencies
 
 ```
-sudo apt install awesome fonts-roboto rofi xclip qt5-style-plugins materia-gtk-theme lxappearance brightnessctl flameshot thunar xfce4-power-manager pnmixer network-manager-gnome policykit-1-gnome nitrogen libxrandr-dev libpam0g-dev -y
+sudo apt install awesome fonts-roboto rofi xclip qt5-style-plugins materia-gtk-theme lxappearance brightnessctl scrot thunar xfce4-power-manager pnmixer network-manager-gnome policykit-1-gnome nitrogen libxrandr-dev libpam0g-dev -y
 wget -qO- https://git.io/papirus-icon-theme-install | sh
+```
+for arch: 
+```
+sudo pacman -S awesome rofi xclip qt5-style-plugins lxappearance brightnessctl scrot pnmixer thunar nitrogen tlp tlpui vscodium numlockx
 ```
 
 #### Program list
