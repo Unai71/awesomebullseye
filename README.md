@@ -12,7 +12,7 @@
 ### 1) Get all the dependencies
 
 ```
-sudo apt install awesome fonts-roboto rofi xclip qt5-style-plugins materia-gtk-theme lxappearance brightnessctl scrot thunar xfce4-power-manager pnmixer network-manager-gnome policykit-1-gnome nitrogen libxrandr-dev libpam0g-dev -y
+sudo apt install awesome fonts-roboto rofi xclip qt5-style-plugins materia-gtk-theme lxappearance brightnessctl scrot thunar xfce4-power-manager pnmixer network-manager-gnome policykit-1-gnome nitrogen libxrandr-dev libpam0g-dev ninja-build meson -y
 wget -qO- https://git.io/papirus-icon-theme-install | sh
 ```
 for arch: 
@@ -51,7 +51,7 @@ sudo pacman -S awesome rofi xclip qt5-style-plugins lxappearance brightnessctl s
 ### Debian-Based Installs
 
 ```
-git clone [url] ~/.config/awesome/
+git clone  https://github.com/Unai71/awesomebullseye.git ~/.config/awesome/
 ```
 
 ### 3) Install picom
