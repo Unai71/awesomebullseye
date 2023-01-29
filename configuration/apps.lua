@@ -29,6 +29,7 @@ return {
   -- List of apps to start once on start-up
   run_on_start_up = {
     'tlp start',
+    'xinput set-prop 17 349 1',
 --    'compton --config ' .. filesystem.get_configuration_dir() .. '/configuration/compton.conf',
    'picom --config ' .. filesystem.get_configuration_dir() .. '/configuration/picom.conf --experimental-backends',
    'nm-applet --indicator', -- wifi
@@ -46,7 +47,7 @@ return {
     -- Add applications that need to be killed between reloads
     -- to avoid multipled instances, inside the awspawn script
     '~/.config/awesome/configuration/awspawn', -- Spawn "dirty" apps that can linger between sessions
-    'touchegg',
+    -- 'touchegg',
   }
 }
 
