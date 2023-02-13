@@ -12,7 +12,7 @@ return {
     rofi = rofi_command,
     lock = 'betterlockscreen -l',
     quake = 'alacritty',
-    screenshot = 'scrot -b ~/Imágenes/Screenshots/%b-%d::%H:%M:%S.png',
+    screenshot = "scrot -b ~/Imágenes/Screenshots/%b-%d::%H:%M:%S.png -e 'xclip -selection clipboard -t image/png -i $f'",
     region_screenshot = "scrot -s ~/Imágenes/Screenshots/%b-%d::%H:%M:%S.png -e 'xclip -selection clipboard -t image/png -i $f'";
     browser = 'firefox',
     editor = 'codium', -- gui text editor
