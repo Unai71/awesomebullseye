@@ -10,7 +10,7 @@ return {
   default = {
     terminal = 'alacritty',
     rofi = rofi_command,
-    lock = 'betterlockscreen -l',
+    lock = 'slock',
     quake = 'alacritty',
     screenshot = "scrot -b ~/Imágenes/Screenshots/%b-%d::%H:%M:%S.png -e 'xclip -selection clipboard -t image/png -i $f'",
     region_screenshot = "scrot -s ~/Imágenes/Screenshots/%b-%d::%H:%M:%S.png -e 'xclip -selection clipboard -t image/png -i $f'";
@@ -37,7 +37,7 @@ return {
     --'blueberry-tray', -- Bluetooth tray icon
     'numlockx on', -- enable numlock
     '/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 & eval $(gnome-keyring-daemon -s --components=pkcs11,secrets,ssh,gpg)', -- credential manager
-    'xss-lock -- betterlockscreen -l', -- Power manager
+    'xss-lock -- slock', -- Power manager
 --     'flameshot',
     -- 'synology-drive -minimized',
      --'steam -silent',
