@@ -334,6 +334,22 @@ local globalKeys =
     {description = 'pausar media' , group = 'media'}
   ),
   awful.key(
+    {modkey},
+    'Left',
+    function ()
+      awful.spawn('playerctl previous')
+      end,
+    {description = 'Cancion Anterior' , group = 'media'}    
+  ),
+  awful.key(
+    {modkey},
+    'Right',
+    function ()
+      awful.spawn('playerctl next')
+      end,
+    {description = 'Siguiente Cancion' , group = 'media'}    
+  ),
+  awful.key(
     {},
     'XF86PowerOff',
     function()
