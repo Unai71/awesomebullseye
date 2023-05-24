@@ -29,7 +29,7 @@ return {
   -- List of apps to start once on start-up
   run_on_start_up = {
     'tlp start',
-    'xinput set-prop 17 349 1',
+    'xinput set-prop 13 326 1',
 --    'compton --config ' .. filesystem.get_configuration_dir() .. '/configuration/compton.conf',
    'picom --config ' .. filesystem.get_configuration_dir() .. '/configuration/picom.conf --experimental-backends',
    'nm-applet --indicator', -- wifi
