@@ -18,7 +18,7 @@ return {
     editor = 'codium', -- gui text editor
     social = 'telegram-desktop',
     game = rofi_command,
-    files = 'thunar',
+    files = 'nautilus',
     music = 'spotify'
   },
 
@@ -29,7 +29,7 @@ return {
   -- List of apps to start once on start-up
   run_on_start_up = {
     'tlp start',
-    'xinput set-prop 13 326 1',
+    'xinput set-prop 11 319 1',
 --    'compton --config ' .. filesystem.get_configuration_dir() .. '/configuration/compton.conf',
    'picom --config ' .. filesystem.get_configuration_dir() .. '/configuration/picom.conf --experimental-backends',
    'nm-applet --indicator', -- wifi
@@ -43,6 +43,7 @@ return {
      --'steam -silent',
     'nitrogen --restore',
     'blueman-applet', --iniciar bluetooth
+    'bluetooth off',
     --'/usr/bin/variety',
     -- Add applications that need to be killed between reloads
     -- to avoid multipled instances, inside the awspawn script
